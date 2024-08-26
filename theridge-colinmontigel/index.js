@@ -9,6 +9,12 @@ const height = 600
 
 setDocDimensions(width, height)
 
+const sky = [[
+  [0, 0],
+  [0, 600],
+  [800, 600],
+  [800, 0]
+]]
 const ridge = [[
   [0, 400],
   [40, 380],
@@ -75,6 +81,8 @@ const cactus = [bt.nurbs([
   [580, 0]
 ])]
 
+drawLines(sky, { fill: "skyblue" });
 drawLines(ridge, { fill: "brown" });
 drawLines(ground, { fill: "darkgreen" });
+drawLines([[[60, 370], [30, 290]], [[350, 320], [335, 240]]]);
 drawLines(cactus, { fill: "YellowGreen" });
