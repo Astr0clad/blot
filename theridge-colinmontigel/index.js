@@ -9,6 +9,39 @@ const height = 600
 
 setDocDimensions(width, height)
 
+const ridge = [[
+  [0, 400],
+  [40, 380],
+  [60, 370],
+  [90, 450],
+  [150, 400],
+  [200, 350],
+  [350, 320],
+  [370, 450],
+  [420, 430],
+  [500, 350],
+  [700, 300],
+  [800, 250],
+  [800, 0],
+  [0, 0]
+]]
+
+const ground = [bt.nurbs([
+  [0, 120],
+  [100, 100],
+  [200, 230],
+  [300, 200],
+  [400, 210],
+  [500, 180],
+  [600, 160],
+  [700, 190],
+  [800, 170],
+  [800, 160],
+  [800, 0],
+  [800, 0],
+  [0, 0]
+])]
+
 const cactus = [bt.nurbs([
   [550, 0],
   [550, 100],
@@ -42,4 +75,6 @@ const cactus = [bt.nurbs([
   [580, 0]
 ])]
 
+drawLines(ridge, { fill: "brown" });
+drawLines(ground, { fill: "darkgreen" });
 drawLines(cactus, { fill: "YellowGreen" });
